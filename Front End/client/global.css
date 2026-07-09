@@ -1,0 +1,150 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Montserrat:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 221 39% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 221 39% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 43 63% 52%;
+    --primary-foreground: 222 47% 8%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 326 85% 57%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 20%;
+    --input: 217 33% 17%;
+    --ring: 43 63% 52%;
+
+    --radius: 0.5rem;
+
+    /* Atlas custom */
+    --atlas-gold: 43 63% 52%;
+    --atlas-gold-light: 43 72% 66%;
+    --atlas-pink: 326 100% 57%;
+    --atlas-navy: 222 47% 8%;
+    --atlas-sidebar: 218 70% 10%;
+    --atlas-card: 221 39% 11%;
+    --atlas-surface: 215 67% 6%;
+    --atlas-green: 152 71% 56%;
+    --atlas-red: 9 100% 66%;
+    --atlas-blue: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[#0F172A] text-foreground font-inter;
+    font-family: 'Inter', -apple-system, sans-serif;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+}
+
+@layer utilities {
+  .font-montserrat {
+    font-family: 'Montserrat', -apple-system, sans-serif;
+  }
+
+  .font-inter {
+    font-family: 'Inter', -apple-system, sans-serif;
+  }
+
+  .atlas-card {
+    background: #111827;
+    border: 1px solid rgba(51, 65, 85, 0.25);
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.30);
+  }
+
+  .gold-gradient {
+    background: linear-gradient(180deg, #D4AF37 -25%, #E7C66A 100%);
+  }
+
+  .gold-text {
+    color: #D4AF37;
+  }
+
+  .pink-text {
+    color: #FF2D9B;
+  }
+
+  .atlas-input {
+    background: #0F172A;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    color: rgba(209, 213, 219, 0.7);
+  }
+
+  .atlas-input:focus {
+    outline: none;
+    border-color: rgba(212, 175, 55, 0.4);
+  }
+
+  .sidebar-item-active {
+    color: rgba(255, 45, 155, 0.8);
+    text-shadow: 0 0 12px rgba(229, 169, 60, 0.50);
+  }
+
+  .sidebar-item {
+    color: #FFFFFF;
+    text-shadow: 0 0 12px rgba(229, 169, 60, 0.50);
+  }
+
+  .glow-gold {
+    filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.5));
+  }
+
+  .glow-pink {
+    filter: drop-shadow(0 0 12px rgba(255, 0, 140, 0.35));
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(51, 65, 85, 0.5) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(51, 65, 85, 0.5);
+    border-radius: 2px;
+  }
+}
